@@ -6,9 +6,9 @@ import PropTypes from 'prop-types';
 const Event = (props) => {
   const {title, icon, date, dateEnd} = props;
   return (
-    <Grid container alignItems={"center"} spacing={16}>
+    <Grid container alignItems={"center"} justify={"center"} spacing={16}>
       <Grid item xs={1}>
-        {icon}
+        <Icon>{icon}</Icon>
       </Grid>
       <Grid item xs={2}>
       {dateEnd ? <form><TextField

@@ -4,12 +4,12 @@ import * as serviceWorker from './serviceWorker';
 
 import Event from './components/event';
 
-const data =[
-  {date: "2019-03-03", title: "foo", icon: "bookmark"},
-  {date: "2019-03-05", title: "test", icon: "build"},
-  {date: "2019-03-05", title: "testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttest testtesttesttest testtesttesttest testtesttesttest testtesttesttest testtesttesttest", icon: "build"},
-  {date: "2019-03-08", dateEnd: "2019-08-08", title: "bar", icon:"class"},
-  {date: "2019-03-08", dateEnd: "2019-08-08", title: "bar", icon:"class"}
+const mockdata =[
+  {date: "2019-03-03", title: "event 1", icon: "bookmark"},
+  {date: "2019-03-05", title: "event 2", icon: "build"},
+  {date: "2019-03-05", title: "A very long event with spaces and longer words in a sentence like dihydrocarboxylicoate and looooooooooooooooooooooooooooooooooooooooooooooooong 1", icon: "android"},
+  {date: "2019-03-08", dateEnd: "2019-08-08", title: "multiday event 1", icon:"edit"},
+  {date: "2019-03-08", dateEnd: "2019-08-08", title: "multiday event 2", icon:"class"}
 ]
 
 const events = (data) => (
@@ -24,7 +24,7 @@ class App extends Component {
 
     return (
       <div>
-        {events(data)}
+        {events(mockdata)}
       </div>
     );
   }
