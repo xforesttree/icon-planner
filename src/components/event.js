@@ -6,13 +6,13 @@ import PropTypes from 'prop-types';
 const Event = (props) => {
   const {title, icon, date, dateEnd} = props;
   return (
-    <Grid container alignItems={"center"} justify={"center"} spacing={16}>
+    <Grid container alignItems={"spaceAround"} justify={"center"}>
       <Grid item xs={1}>
         <Icon>{icon}</Icon>
       </Grid>
       <Grid item xs={2}>
       {dateEnd ? <form><TextField
-        id="date"
+        id="dateStart"
         label="Date Start"
         defaultValue={date}
         type="date"
@@ -20,7 +20,7 @@ const Event = (props) => {
           shrink: true,
         }}
       /><TextField
-        id="date"
+        id="dateEnd"
         label="Date End"
         defaultValue={dateEnd}
         type="date"
@@ -37,11 +37,11 @@ const Event = (props) => {
         }}
       /></form>}
       </Grid>
-      <Grid item xs={8}>
-      <Typography variant="overline">{title}</Typography>
+      <Grid item xs={4}>
+        <Typography variant="overline">{title}</Typography>
       </Grid>
-      <Grid item>
-      <Delete/>
+      <Grid item xs={1}>
+        <Delete/>
       </Grid>
     </Grid>
   )
