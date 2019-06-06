@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 const Event = (props) => {
   const {title, icon, date, dateEnd} = props;
   return (
-    <Grid container alignItems={"spaceAround"} justify={"center"}>
+    <Grid container alignItems={"center"} justify={"center"}>
       <Grid item xs={1}>
         <Icon>{icon}</Icon>
       </Grid>
